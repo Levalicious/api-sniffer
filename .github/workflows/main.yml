@@ -10,7 +10,7 @@ jobs:
   build:
     continue-on-error: true
     strategy:
-      max-parallel: 4
+      max-parallel: 10
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         version: [16, 18, 20, 21, 22]
@@ -21,6 +21,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.version }}
+          cache: npm-${{ matrix.os }}
       - name: Install Dependencies
         run: npm install
       - name: Build
