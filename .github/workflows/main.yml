@@ -16,7 +16,7 @@ jobs:
         version: [16, 18, 20, 21, 22]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
