@@ -64,7 +64,7 @@ export class App {
         status: (reason.response && reason.response.status) || 500,
         text: (reason.response && reason.response.statusText) || "Internal error",
         headers: (reason.response && reason.response.headers) || {},
-        data: (reason.response && reason.response.data) || null,
+        data: (reason.response && reason.response.data as string) || null,
       };
     }).finally(() => {
       if (exchange.response) {
