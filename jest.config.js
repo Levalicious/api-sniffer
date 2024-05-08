@@ -1,9 +1,5 @@
 module.exports = {
-  globals: {
-    'ts-jest': {
-      tsConfig: 'tsconfig.json'
-    }
-  },
+  preset: 'ts-jest',
   setupFiles: ["./jest.setup.js"],
   moduleFileExtensions: ['ts', 'js'],
   transform: {
